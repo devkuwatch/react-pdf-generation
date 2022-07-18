@@ -14,7 +14,7 @@ const PDFLink: React.FC = () => {
 
   const [error, setError] = useState(false);
   const [requesting, setRequesting] = useState(false);
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState<Array<ApiData> | undefined>(initialData);
   const [attempts, setAttempts] = useState(0);
 
   const requestDataUrl = "https://randomuser.me/api/?results=1&inc=name,email";
